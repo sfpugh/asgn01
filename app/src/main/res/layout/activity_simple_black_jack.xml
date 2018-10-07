@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SimpleBlackJack">
+    tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/NewGameButton"
-        android:layout_width="101dp"
-        android:layout_height="37dp"
+        android:id="@+id/newGameButton"
+        android:layout_width="110dp"
+        android:layout_height="44dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -17,133 +17,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/computerCard1ImageView"
-        android:layout_width="51dp"
-        android:layout_height="80dp"
-        android:scaleType="fitXY"
-        app:srcCompat="@android:drawable/edit_text"
-        tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="80dp" />
-
-    <ImageView
-        android:id="@+id/computerCard2ImageView"
-        android:layout_width="51dp"
-        android:layout_height="80dp"
-        android:scaleType="fitXY"
-        app:srcCompat="@android:drawable/edit_text"
-        tools:layout_editor_absoluteX="107dp"
-        tools:layout_editor_absoluteY="80dp" />
-
-    <ImageView
-        android:id="@+id/computerCard3ImageView"
-        android:layout_width="51dp"
-        android:layout_height="80dp"
-        android:scaleType="fitXY"
-        app:srcCompat="@android:drawable/edit_text"
-        tools:layout_editor_absoluteX="167dp"
-        tools:layout_editor_absoluteY="80dp" />
-
-    <ImageView
-        android:id="@+id/computerCard4ImageView"
-        android:layout_width="51dp"
-        android:layout_height="80dp"
-        android:scaleType="fitXY"
-        app:srcCompat="@android:drawable/edit_text"
-        tools:layout_editor_absoluteX="227dp"
-        tools:layout_editor_absoluteY="80dp" />
-
-    <ImageView
-        android:id="@+id/computerCard5ImageView"
-        android:layout_width="51dp"
-        android:layout_height="80dp"
-        android:scaleType="fitXY"
-        app:srcCompat="@android:drawable/edit_text"
-        tools:layout_editor_absoluteX="285dp"
-        tools:layout_editor_absoluteY="80dp" />
-
-    <TextView
-        android:id="@+id/dealerPointsTextView"
-        android:layout_width="21dp"
-        android:layout_height="26dp"
-        android:layout_marginBottom="8dp"
-        android:text="0"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/computerCard3ImageView"
-        tools:layout_editor_absoluteX="182dp" />
-
-    <ImageView
-        android:id="@+id/playerCard1ImageView"
-        android:layout_width="65dp"
-        android:layout_height="100dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toStartOf="@+id/playerCard2ImageView"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/edit_text"
-        tools:layout_editor_absoluteY="326dp" />
-
-    <ImageView
-        android:id="@+id/playerCard2ImageView"
-        android:layout_width="65dp"
-        android:layout_height="100dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toStartOf="@+id/playerCard3ImageView"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/playerCard1ImageView"
-        app:srcCompat="@android:drawable/edit_text"
-        tools:layout_editor_absoluteY="326dp" />
-
-    <ImageView
-        android:id="@+id/playerCard3ImageView"
-        android:layout_width="65dp"
-        android:layout_height="100dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toStartOf="@+id/playerCard4ImageView"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/playerCard2ImageView"
-        app:srcCompat="@android:drawable/edit_text"
-        tools:layout_editor_absoluteY="326dp" />
-
-    <ImageView
-        android:id="@+id/playerCard4ImageView"
-        android:layout_width="65dp"
-        android:layout_height="100dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toStartOf="@+id/playerCard5ImageView"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/playerCard3ImageView"
-        app:srcCompat="@android:drawable/edit_text"
-        tools:layout_editor_absoluteY="326dp" />
-
-    <ImageView
-        android:id="@+id/playerCard5ImageView"
-        android:layout_width="65dp"
-        android:layout_height="100dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/playerCard4ImageView"
-        app:srcCompat="@android:drawable/edit_text"
-        tools:layout_editor_absoluteY="326dp" />
-
-    <TextView
-        android:id="@+id/playerPointsTextView"
-        android:layout_width="21dp"
-        android:layout_height="26dp"
-        android:layout_marginBottom="8dp"
-        android:text="0"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/playerCard3ImageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <Button
         android:id="@+id/hitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:text="Hit"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -155,25 +33,195 @@
         android:id="@+id/stopButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="Stop"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/hitButton"
-        tools:layout_editor_absoluteY="447dp" />
+        app:layout_constraintStart_toEndOf="@+id/hitButton" />
+
+    <TextView
+        android:id="@+id/dealerPointsTextView"
+        android:layout_width="40dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/playerPointsTextView"
+        android:layout_width="40dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameResultTextView" />
 
     <TextView
         android:id="@+id/gameResultTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:textSize="30sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.469" />
+
+    <ImageView
+        android:id="@+id/dealerCard1ImageView"
+        android:layout_width="60dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/dealerCard2ImageView"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dealerPointsTextView"
+        app:srcCompat="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/dealerCard2ImageView"
+        android:layout_width="60dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/dealerCard3ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/dealerPointsTextView"
+        app:srcCompat="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/dealerCard3ImageView"
+        android:layout_width="60dp"
+        android:layout_height="87dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/gameResultTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="205dp" />
+        app:layout_constraintTop_toBottomOf="@+id/dealerPointsTextView"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/dealerCard4ImageView"
+        android:layout_width="60dp"
+        android:layout_height="87dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/dealerCard3ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/dealerPointsTextView"
+        app:srcCompat="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/dealerCard5ImageView"
+        android:layout_width="60dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dealerCard4ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/dealerPointsTextView"
+        app:srcCompat="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/playerCard1ImageView"
+        android:layout_width="60dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/playerCard2ImageView"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerPointsTextView"
+        app:srcCompat="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/playerCard2ImageView"
+        android:layout_width="60dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/playerCard3ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/playerPointsTextView"
+        app:srcCompat="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/playerCard3ImageView"
+        android:layout_width="61dp"
+        android:layout_height="87dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerPointsTextView"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/playerCard4ImageView"
+        android:layout_width="60dp"
+        android:layout_height="87dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/playerCard3ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/playerPointsTextView"
+        app:srcCompat="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/playerCard5ImageView"
+        android:layout_width="60dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toEndOf="@+id/playerCard4ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/playerPointsTextView"
+        app:srcCompat="@android:color/transparent" />
 
 </android.support.constraint.ConstraintLayout>

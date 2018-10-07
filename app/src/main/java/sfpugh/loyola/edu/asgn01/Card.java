@@ -1,10 +1,12 @@
-/**
- * A class to represent a card
- * @author Sydney Pugh
- */
-
 package sfpugh.loyola.edu.asgn01;
 
+/**
+ * Card represents a single playing card. A playing card holds two values: the suit and the rank of
+ * the card.
+ * @author Sydney Pugh
+ * @version 1.0
+ * @since 2018-10-06
+ */
 public class Card {
 
     private String suit;

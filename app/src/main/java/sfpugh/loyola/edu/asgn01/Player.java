@@ -1,12 +1,14 @@
-/**
- * A class to represent a player of the game
- * @author Sydney Pugh
- */
-
 package sfpugh.loyola.edu.asgn01;
 
 import java.util.ArrayList;
 
+/**
+ * Player class represents a player in the SimpleBlackjack game. The player can draw cards from the
+ * deck into his/her own hand. Various operations to interpret the player's hand are implemented.
+ * @author Sydney Pugh
+ * @version 1.0
+ * @since 2018-10-06
+ */
 public class Player {
 
     private ArrayList<Card> hand;
@@ -45,46 +47,36 @@ public class Player {
         for (int i = 0; i < hand.size(); i++) {
             // add value of card to total
             switch (hand.get(i).getRank()) {
-                case "A":   value += (value + 11 > 21) ? 1 : 11; break;
-                case "1":   value += 1; break;
-                case "2":   value += 2; break;
-                case "3":   value += 3; break;
-                case "4":   value += 4; break;
-                case "5":   value += 5; break;
-                case "6":   value += 6; break;
-                case "7":   value += 7; break;
-                case "8":   value += 8; break;
-                case "9":   value += 9; break;
-                case "10":
-                case "J":
-                case "Q":
-                case "K":   value += 10; break;
-                default:
+                    case "A":   value += (value + 11 > 21) ? 1 : 11; break;
+                    case "2":   value += 2; break;
+                    case "3":   value += 3; break;
+                    case "4":   value += 4; break;
+                    case "5":   value += 5; break;
+                    case "6":   value += 6; break;
+                    case "7":   value += 7; break;
+                    case "8":   value += 8; break;
+                    case "9":   value += 9; break;
+                    case "10":
+                    case "J":
+                    case "Q":
+                    case "K":   value += 10; break;
+                    default:    break;
             }
         }
-
         return value;
     }
 
     /**
-     * Check for blackjack (i.e., an ace and a J, Q, or K)
-     * @return true if hand is a blackjack, otherwise false
+     * Gets the player's current hand
+     * @return array representation of the player's hand
      */
-    public boolean checkBlackjack() {
-        return hand.size() == 2 && ((hand.get(0).equals("A") && hand.get(1).equals("J")) ||
-                                    (hand.get(0).equals("A") && hand.get(1).equals("Q")) ||
-                                    (hand.get(0).equals("A") && hand.get(1).equals("K")) ||
-                                    (hand.get(0).equals("J") && hand.get(1).equals("A")) ||
-                                    (hand.get(0).equals("Q") && hand.get(1).equals("A")) ||
-                                    (hand.get(0).equals("K") && hand.get(1).equals("A")));
-
+    public Card[] getHand(){
+        return hand.toArray(new Card[0]);
     }
 
     /**
-     * Gets the player's current hand
-     * @return the player's hand
+     * Returns the number of cards in the player's hand
+     * @return number of cards in current hand
      */
-    public Object[] getHand(){
-        return hand.toArray();
-    }
+    public int numCardsInHand() { return hand.size(); }
 }
